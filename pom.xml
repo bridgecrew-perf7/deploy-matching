@@ -16,7 +16,13 @@
     <properties>
         <java.version>11</java.version>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -98,7 +104,7 @@
         <dependency>
             <groupId>group.id.matchDB</groupId>
             <artifactId>artifact.id.matchDB</artifactId>
-            <systemPath>${project.basedir}/src/main/resources/proiectIP.jar</systemPath>
+            <systemPath>${project.basedir}/repo/proiectIP.jar</systemPath>
             <scope>system</scope>
             <version>1.0</version>
         </dependency>
@@ -109,6 +115,7 @@
             <artifactId>threetenbp</artifactId>
             <version>1.5.1</version>
         </dependency>
+
 
 <!--        <dependency>-->
 <!--            <groupId>com.proiectip.matching</groupId>-->
@@ -125,65 +132,26 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-<!--                <version>1.5.2.RELEASE</version>-->
+            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.jcabi</groupId>-->
+<!--                <artifactId>jcabi-heroku-maven-plugin</artifactId>-->
+<!--                <version>0.4.1</version>-->
+<!--                <configuration>-->
+<!--                    <name>my-test-app</name>-->
+<!--                    <artifacts>-->
+<!--                        <artifact>com.proiectip.matching:proiectIP:jar::${project.version}</artifact>-->
+<!--                    </artifacts>-->
+<!--                    <procfile>web: java -Xmx256m -jar ./proiectIP.jar \${PORT}</procfile>-->
+<!--                </configuration>-->
 <!--                <executions>-->
 <!--                    <execution>-->
 <!--                        <goals>-->
-<!--                            <goal>repackage</goal>-->
+<!--                            <goal>deploy</goal>-->
 <!--                        </goals>-->
 <!--                    </execution>-->
 <!--                </executions>-->
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-<!--                        <goals>-->
-<!--                            <goal>shade</goal>-->
-<!--                        </goals>-->
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                    <resource>META-INF/spring.handlers</resource>
-                                </transformer>
-                                <transformer
-                                        implementation="org.springframework.boot.maven.PropertiesMergingResourceTransformer">
-                                    <resource>META-INF/spring.factories</resource>
-                                </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
-                                    <resource>META-INF/spring.schemas</resource>
-                                </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                            </transformers>
-                            <artifactSet>
-                                <excludes>
-                                    <exclude>org.apache.tomcat.embed:*</exclude>
-                                </excludes>
-                            </artifactSet>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.jcabi</groupId>
-                <artifactId>jcabi-heroku-maven-plugin</artifactId>
-                <version>0.4.1</version>
-                <configuration>
-                    <name>my-test-app</name>
-                    <artifacts>
-                        <artifact>com.proiectip.matching:proiectIP:jar::${project.version}</artifact>
-                    </artifacts>
-                    <procfile>web: java -Xmx256m -jar ./proiectIP.jar \${PORT}</procfile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            </plugin>-->
 
         </plugins>
     </build>

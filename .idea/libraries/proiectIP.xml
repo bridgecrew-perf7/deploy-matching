@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="proiectIP">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/resources/proiectIP.jar!/" />
+      <root url="jar://$PROJECT_DIR$/repo/proiectIP.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

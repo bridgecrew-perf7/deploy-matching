@@ -108,7 +108,7 @@
     <orderEntry type="module-library">
       <library name="Maven: group.id.matchDB:artifact.id.matchDB:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/src/main/resources/proiectIP.jar!/" />
+          <root url="jar://$MODULE_DIR$/repo/proiectIP.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
