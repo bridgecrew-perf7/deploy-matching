@@ -1,0 +1,13 @@
+com\proiectip\matching\responses\HelperResponse.class
+com\proiectip\matching\users\HelperData.class
+com\proiectip\matching\utils\Controller.class
+com\proiectip\matching\users\NeederData.class
+com\proiectip\matching\utils\MatchingAlgorithm.class
+com\proiectip\matching\utils\JsonParser.class
+com\proiectip\matching\MatchingApplication.class
+com\proiectip\matching\responses\MatchResponse.class
+com\proiectip\matching\utils\DistanceCalculator.class
+com\proiectip\matching\utils\GoogleApiContext.class
+com\proiectip\matching\users\Person.class
+com\proiectip\matching\utils\Algorithm.class
+com\proiectip\matching\users\Interval.class
