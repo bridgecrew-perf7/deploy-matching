@@ -11,6 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="proiectIP" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.4.5" level="project" />
@@ -114,6 +115,5 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: org.threeten:threetenbp:1.5.1" level="project" />
-    <orderEntry type="library" name="proiectIP" level="project" />
   </component>
 </module>
